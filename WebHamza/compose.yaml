@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    image: keslaback
+    build:             
+      context: kesla-service-backend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+  frontend:
+    image: keslafront
+    build:             
+      context: kesla-service-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
